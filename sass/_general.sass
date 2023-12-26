@@ -1,0 +1,341 @@
+html
+	scroll-behavior: smooth
+	font-family: Titillium, sans-serif
+body
+	margin: 0 auto
+.span
+	color: #ffc107
+.pulse
+	position: relative
+	display: grid
+	margin: 40px auto 0
+	justify-content: center
+	align-items:center
+	text-align: center 
+	padding: 20px
+	border-radius: 50%
+	background: #ffc107
+	width: 80px
+	height: 80px
+
+button.promo_btn
+		border: none
+		background-color: #ffc107
+		font-weight: 400
+		text-transform: uppercase
+		a
+			position: absolute
+			top: 20px
+			left: 20px
+			text-decoration: none
+			height: 40px
+			width: 40px
+			z-index:20
+		img
+			height: 40px
+			width: 40px
+			animation: shake 1s
+			animation-iteration-count: infinite
+
+.pulse::after, .pulse::before
+	content: ''
+	position: absolute
+	border: 2px solid #ffc107
+	left: -20px
+	opacity: 0
+	right: -20px
+	top: -20px
+	bottom: -20px
+	border-radius: 50%
+	animation: pulse 2.5s linear infinite
+.pulse::after 
+	animation-delay: 1.25s
+@keyframes pulse 
+	0%
+		transform: scale(0.5)
+		opacity: 0
+	50%
+		opacity: 1
+	100%
+		transform: scale(1.2)
+		opacity: 0
+@keyframes shake
+	0%
+		transform: translate(1px, 1px) rotate(0deg)
+	10%
+		transform: translate(-1px, -2px) rotate(-1deg)
+	20%
+		transform: translate(-3px, 0px) rotate(1deg)
+	30%
+		transform: translate(3px, 2px) rotate(0deg)
+	40%
+		transform: translate(1px, -1px) rotate(1deg)
+	50%
+		transform: translate(-1px, 2px) rotate(-1deg)
+	60%
+		transform: translate(-3px, 1px) rotate(0deg)
+	70%
+		transform: translate(3px, 1px) rotate(-1deg)
+	80%
+		transform: translate(-1px, -1px) rotate(1deg)
+	90%
+		transform: translate(1px, 2px) rotate(0deg)
+	100%
+		transform: translate(1px, -2px) rotate(-1deg)
+header
+	position: relative
+	height: 50px
+nav
+	position: fixed
+	width: 100vw
+	height: 50px
+	background-color: #212121
+	z-index: 5
+.modal_active
+	display: block
+.hamburger
+	display: none
+
+.container
+	display: flex
+	justify-content: flex-end
+	align-items: center
+.menu
+	width: 80vw
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	padding: 13px 0
+	gap: 10px
+	margin: 0
+	list-style-type: none
+	&_link
+		color: #ffffff
+		font-size: 15px
+		font-weight: 300
+		&:hover
+			text-decoration: none
+			color: #ffffff
+	&_item
+		padding-right: 28px
+		&:last-child
+			border-right: none
+.subheader
+	position: absolute
+	top: 50px
+	width: 100%
+	height: 84px
+	background-color: rgba(255, 255, 255, 0.3)
+	.row
+		align-items: center
+	&_logo
+		display: block
+		width: 50px
+		margin-top: 16px
+	&_call
+		color: #ffffff
+		font-size: 12px
+		font-weight: 300
+		margin-top: 19px
+		text-align: right
+	&_phone
+		display: block
+		margin-top: 8px
+		color: #ffffff
+		font-size: 22px
+		font-weight: 400
+		text-transform: uppercase
+		text-align: right
+		line-height: 12px
+		&:hover
+			text-decoration: none
+			color: #fff
+	&_btn
+		margin-top: 19px
+		width: 172px
+		height: 46px
+		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
+		border: none
+		border-radius: 4px
+		background-image: linear-gradient(to top, #ffffff 0%, #4ce2ff 100%)
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+		color: #ffffff
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+.promo
+	height: 90vh
+	background: url('../images/oil.jpg') center (center/cover) no-repeat
+	position: relative
+	margin-bottom: 50px
+	&_wrapper
+		position: absolute
+		top: 0
+		left: 0
+		background-color: #101049
+		opacity: 65%
+		height: 90vh
+		width: 100%
+	&_container
+		margin: 5vw auto
+		width:90vw
+		display: grid
+		align-items: center
+		justify-content: center
+		z-index: 2
+		position: absolute
+		top: 1vw
+		left: 5vw
+		padding: 2vw
+	&_header
+		color: #ffc107
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 60px
+		line-height: 60px
+		margin: 0
+		text-align: center
+	&_subheader
+		color: white
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 36px
+		line-height: 36px
+		margin: 0
+		margin-top: 22px
+		text-align: center
+	&_descr
+		color: white
+		font-size: 24px
+		font-weight: 400
+		line-height: 40px
+		margin-top: 23px
+		span
+			color: #ffc107
+			font-weight: 700
+		img
+
+			width: 40px
+			height: 40px
+		&_el
+			text-align: center
+.services
+	position: relative
+	padding-top: 100px
+	margin: 50px auto
+	ul
+		list-style: none
+	
+	ul li::before
+		content: "•"
+		color: #ffc107
+		font-weight: bold
+		display: inline-block
+		width: 1em
+		margin-left: -1em
+	&_header
+		margin-bottom: 50px
+		text-align: center
+		text-transform: uppercase
+		font-size: 40px
+		color: #ffffff
+	&_wrapper_el
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		gap: 2vw
+	.card-title
+		color: #ffc107
+		text-align: center
+	.card
+		padding: 2%
+		padding-bottom: 10%
+		background-color: rgb(30,33,61)
+		color: #ffffff
+		border-color: #ffffff
+	.col-md-4
+		display: grid
+		align-items: center
+		justify-content: center
+	a
+		position: absolute
+		bottom: 4%
+	&_main_service
+		display: grid
+		justify-content: center
+		align-items: center
+		margin: 0 auto
+		width: 80vw
+		&_wrapper
+			display: grid
+			justify-content: center
+			grid-template-columns: 300px 1fr
+			&_title
+				margin-bottom: 50px
+				text-align: center
+				text-transform: uppercase
+				font-size: 40px
+			&_img
+				height: 300px
+				width: 300px
+				overflow: hidden
+				display: flex
+				justify-content: center
+				align-items: center
+				img
+					height: 100%
+					width:100%
+			&_descr
+				background-color: pink
+		&_services
+			display: grid
+			justify-content: center
+			grid-template-columns: 1fr 1fr 1fr
+			gap: 5vw
+			.card
+				display: grid
+				justify-content: center
+				height: 50vh
+				.card-body
+					text-align: center
+				.card-img-top
+					width: 5vw
+					height: 5vw
+					margin: 2vw auto
+			.trio
+				display: grid
+				grid-template-rows: 1fr 1fr 1fr
+				text-align: left
+				&_img
+					width: 30x
+					height: 30px
+					padding-bottom: 2px
+					padding-right: 4px
+.our
+	padding: 50px
+.services::after
+	background-color: rgb( 30,33,61)
+	position: absolute
+	content: ''
+	right: 0
+	top: 0
+	width: 100vw
+	height: 100%
+	z-index: -1
+.xs-visible
+	display: nones
+.carousel
+	width: 50vw
+	margin: 0 auto
+.carousel-item
+	width: 50vw
+	height: 50vw
+	margin: auto 0
+.photo
+	display: grid
+	justify-content: center
+	grid-template-rows: 20px 1fr
+	gap: 50px
+	&_header
+		text-align: center
+		text-transform: uppercase
+		font-size: 40px

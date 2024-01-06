@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.min.css">
+    <script src="https://kit.fontawesome.com/39e379a453.js" crossorigin="anonymous"></script>
   </head>
   <body>
 
@@ -20,13 +21,13 @@
   <section class="promo">
     <header>
         <nav>
-            <a class='tel' href="tel:+375(33)6261781">+375 (33) 626 17 81</a>
             <div class="container">
                 <ul class="menu">
                     <li class="menu_item"><a href="#" class="menu_link">Главная</a></li>
                     <li class="menu_item"><a href="#info" class="menu_link">О нас</a></li>
                     <li class="menu_item"><a href="#cargo" class="menu_link">Услуги</a></li>
                     <li class="menu_item"><a href="#photo" class="menu_link">Фотогалерея</a></li>
+                    <li class="menu_item"><a href="#contacts" class="menu_link">Контакты</a></li>
                 </ul>
             </div>
             <div class="hamburger">
@@ -48,9 +49,13 @@
                     <div class = "promo_descr_el">Гарантия качества на <span>5</span> лет</div>
                     <div class = "promo_descr_el">Рассрочка</div>
                   </div>
-                  <div class="pulse">
-                    <button class="promo_btn"><a href="tel:+375(33)6261781"><img src="/images/phone.svg"></a></button>
+                  <div class="pulse pulse_mobile">
+                    <button class="promo_btn promo_btn_mobile"><a href="tel:+375(33)6261781"><img src="/images/phone.svg"></a></button>
                   </div>
+                  <div class="pulse_desctop">
+                  Звоните нам по номеру
+                  <a class="promo_btn_desctop" href="tel:+375(33)6261781">+375336261781</a>
+                </div>
               </div>
           </div>
       </div>
@@ -107,7 +112,7 @@
                     <li>монтаж кессона или оборудование приямка</li>
                     <li>установка насоса, гидроаккумулятора и сопутствующего оборудования</li>
                     <li>подключение автоматики</li>
-                    <li>настройка системы.</li>
+                    <li>настройка системы</li>
                 </ul>
             </div>
     </div>
@@ -190,7 +195,7 @@
           </ul>
           </li>
           <li>Гарантийный срок обслуживания – 2 года</li>
-          <li>Своевременная профилактика, проверка и настройка позволяет продлить сроки службы оборудования.</li>
+          <li>Своевременная профилактика, проверка и настройка позволяет продлить сроки службы оборудования</li>
       </ul>
     </p>
     </div>
@@ -213,21 +218,15 @@
 </div>
 </div>
 
-<div class ="form">
-<h2 class="title">Не удалось дозвониться?</h2>
-<div class="consultation__descr">Просто заполните форму заявки<br>и мы перезвоним вам</div>
-<form id="consultation-form" class="feed-form" action="khamitsevich.elen@gmail.com" method="post">
-  <input name="name" required placeholder="Ваше имя" type="text">
-  <label id="name-error" class="error none name" for="name">Пожалуйста, введите свое имя</label>
-  <input name="phone" class="phone" required  placeholder="Ваш телефон">
-  <label id="phone-error" class="error none phonel" for="phone">Пожалуйста, введите свой номер телефона</label>
-  <textarea name="comment" wrap="off" placeholder="Примечание"></textarea>
-  <a href="mailto:khamitsevich.elen@gmail.com">Link text</a>
-  <button class="button button_submit">оставить заявку</button>
-</form>
+<div class="contacts" id="contacts">
+  <div class="contacts_header">Контакты</div>
+  <div class="contacts_information">
+    <a href="tel:+375(33)6261781"><i class="fa-solid fa-phone fa-beat fa-2xl"></i>Звоните +375336261781</a>
+    <a href="viber://chat?number=%2B375295699644"><i class="fa-brands fa-viber fa-beat fa-2xl"></i>Пишите нам нам на вайбер</a>
+    <a href=""><i class="fa-brands fa-instagram fa-beat fa-2xl"></i>название инстаграмма</a>
+    <a href="mailto:khamitsevich.elen@gmail.com"><i class="fa-regular fa-envelope fa-beat fa-2xl"></i>khamitsevich.elen@gmail.com</a>
+  </div>
 </div>
-
-<a href="viber://chat?number=%2B375295699644">Viber</a>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

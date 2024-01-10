@@ -254,6 +254,13 @@ nav
 		display: inline-block
 		width: 1em
 		margin-left: -1em
+	ul li>ul>li::before
+		content: "•"
+		color: #98FB98
+		font-weight: bold
+		display: inline-block
+		width: 1em
+		margin-left: -1em
 	&_header
 		margin-bottom: 50px
 		text-align: center
@@ -369,7 +376,7 @@ nav
 		gap: 10px
 		img
 			width: 80%
-			height: 70vw
+			height: 75vw
 			transition-duration: 1s
 	.galery_1
 		display: grid
